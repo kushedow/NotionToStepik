@@ -129,19 +129,16 @@ class NotionToStepik():
         pass
 
 
-print("*"*64,"\r\n","Привет! Notion 2 Stepik парсит страничку на Notion и добавляет шаги на Stepik!","\r\n"+"*"*64,"\r\n")
+print("*"*64,"\r\n","Привет! Notion 2 Stepik превращает страничку на Notion в шаги на Stepik!","\r\n"+"*"*64,"\r\n")
 
 if not os.path.exists("config.json"):
 
     config = {}
 
-    print("У меня пока нет ключей к Notion и Stepik. Введи их, пожалуйста \r\n ")
-    config['notion_token'] = input("Введи ключ к Notion. \r\nОткрой Notion.io, жмякни Ctrl + Shift + J (или Option + command + J).\r\nИди в Application -> Cookies, скопируй token_v2\r\n")
-    print("Токен записан")
-    config['stepik_id'] = input("Введи Stepic ID. \r\nПолучи его тут: https://stepik.org/oauth2/applications/ (client type = confidential, authorization grant type = client credentials)\r\n")
-    print("Stepic ID записан")
-    config['stepik_secret'] = input("Введи Stepic Secret, получи его на той же странице\r\n")
-    print("Stepic Secret записан")
+    print("У меня пока нет ключей к Notion и Stepik.\r\nВведи их, пожалуйста.\r\nТебе пригодится инструкция: https://github.com/kushedow/NotionToStepik \r\n ")
+    config['notion_token'] = input("Введи Notion token_v2 ")
+    config['stepik_id'] = input("Введи Stepic id")
+    config['stepik_secret'] = input("Введи Stepic Secret")
 
     with open("config.json", "w") as f:
         f.write(json.dumps(config))
@@ -152,7 +149,6 @@ else:
     print("Настройки найдены, работаем...")
     with open("config.json", "r") as f:
         config = json.load(f)
-
 
 
 n2s = NotionToStepik(config['notion_token'], config['stepik_id'], config['stepik_secret'])
