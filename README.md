@@ -13,7 +13,7 @@
 
 ## Первое использование и настройка
 
-При первом запуске скрипт попросит token_v2 от Notion, id и secret от Stepik.
+При первом запуске скрипт попросит token_v2 от Notion, id и secret от Stepik, Filestack APIKEY.
 
 **Чтобы получить token_v2 от Notion**
 
@@ -27,6 +27,11 @@
 * Перейдите сюда: https://stepik.org/oauth2/applications/
 * Выберите client type = confidential, authorization grant type = client credentials
 * Скопируйте id и secret
+
+**Чтобы получить Filestack APIKEY**
+
+Зарегистрируйcz на https://filestack.com
+Скопируй Apikey (в правом верхнем углу)
 
 ## Что уже сделано?
 
