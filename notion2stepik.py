@@ -1,8 +1,11 @@
 # Run with Python 3
 
-import requests, html, json, os
-from notion.client import NotionClient
+import html
+import json
+import os
+import requests
 from filestack import Client
+from notion.client import NotionClient
 
 ''' 
 
