@@ -3,6 +3,7 @@
 import html
 import json
 import os
+
 import requests
 from filestack import Client
 from notion.client import NotionClient
@@ -17,7 +18,6 @@ from notion.client import NotionClient
 notion_url = "https://www.notion.so/3ba742086745450fb6a07945e52331e3"
 stepik_lesson = 277836
 
-
 """
 
 Класс, который делает все копирование
@@ -26,7 +26,6 @@ stepik_lesson = 277836
 
 
 class NotionToStepik:
-
     notion_client = None
     stepik_token = None
     filestack_token = None
@@ -72,8 +71,7 @@ class NotionToStepik:
             response = requests.get(url, stream=True)
 
             if not response.ok:
-                print
-                response
+                print(response)
 
             for block in response.iter_content(1024):
                 if not block:
@@ -81,9 +79,8 @@ class NotionToStepik:
 
                 handle.write(block)
 
-        return ""
-
         print("Загрузка закончена")
+        return ""
 
     def filestack_upload_image(self, filename):
 
@@ -205,7 +202,6 @@ else:
     print("Настройки найдены, работаем...")
     with open("config.json", "r") as f:
         config = json.load(f)
-
 
 n2s = NotionToStepik(config)
 
