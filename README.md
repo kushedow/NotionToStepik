@@ -17,7 +17,7 @@
 
 **Чтобы получить token_v2 от Notion**
 
-* Откройте в браузере Notion.io
+* Откройте в браузере Notion.so
 * Нажмите Ctrl + Shift + J (или Option + command + J)
 * Перейдите на вкладку Application, слева выберите Cookies
 * Cкопируйте token_v2
