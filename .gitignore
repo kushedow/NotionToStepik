@@ -3,3 +3,5 @@
 /app.py
 /add_page.py
 /notionenv/
+.idea
+venv
